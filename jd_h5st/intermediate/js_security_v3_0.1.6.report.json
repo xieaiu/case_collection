@@ -1,0 +1,49 @@
+{
+  "family": "custom stack-machine / VM-style mixed obfuscation",
+  "pipeline": [
+    "parse with Babel",
+    "restore _4vve5 XOR-5 string decoder calls",
+    "generate intermediate artifact",
+    "reparse",
+    "normalize safe computed member access",
+    "restore a03438dp/mj runtime string decoder calls in isolated VM",
+    "conservative numeric/string/boolean constant folding"
+  ],
+  "stats": {
+    "inputChars": 235377,
+    "inputLines": 5,
+    "decoderCallsBefore": 3690,
+    "stringRestored": 255,
+    "whileStatements": 5,
+    "switchStatements": 48,
+    "vmBytecodeArrays": 1,
+    "outputChars": 377063,
+    "outputLines": 9944,
+    "decoderCallsAfter": 3435,
+    "runtimeStringsRestored": 263,
+    "binaryFolded": 3340,
+    "unaryFolded": 2875,
+    "memberNormalized": 4,
+    "finalOutputChars": 348571,
+    "finalOutputLines": 9944
+  },
+  "entryPoints": {
+    "publicAsync": "ParamsSign.prototype.sign",
+    "publicSync": "ParamsSign.prototype.signSync",
+    "vmEntry": "ParamsSign.prototype._$sdnmd",
+    "tokenRefresh": "ParamsSign.prototype._$ram"
+  },
+  "residual": [
+    "The _2hoe5 bytecode array and _$sdnmd stack machine remain intact.",
+    "Runtime fingerprint/token state is not statically evaluated.",
+    "The VM function layer was verified under the env-patch browser shim.",
+    "Runtime fingerprint/token state is not statically evaluated; browser-equivalent output requires legal session seeds.",
+    "The final reading artifact was reparsed successfully after constant folding."
+  ],
+  "artifacts": {
+    "original": "reverse-records\\js_security_v3_0.1.6.original.js",
+    "intermediate": "intermediate\\js_security_v3_0.1.6.step1_strings.js",
+    "readable": "source\\deobfuscated\\js_security_v3_0.1.6.readable.js",
+    "runtimeStrings": "intermediate\\js_security_v3_0.1.6.step2_runtime_strings.js"
+  }
+}
